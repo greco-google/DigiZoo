@@ -19,9 +19,9 @@ public class Zoo {
 		}
 	}
 	
-	public void showAllPetType() {
+	public void showAllPetTypes() {
 		for (Pet pet: pets) {
-			System.out.println(pet.getPetType() + " is a " + pet.getPetType());
+			System.out.println(pet.getPetName() + " is a " + pet.getPetType());
 		}
 	}
 	
