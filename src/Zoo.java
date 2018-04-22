@@ -19,9 +19,9 @@ public class Zoo {
 		}
 	}
 	
-	public void showAllSalaryRates() {
+	public void showAllPetType() {
 		for (Pet pet: pets) {
-			System.out.println(pet.getPetType() + " is a " + pet.petType());
+			System.out.println(pet.getPetType() + " is a " + pet.getPetType());
 		}
 	}
 	
