@@ -6,7 +6,7 @@ public class DigiZooApp {
 
 		Scanner input = new Scanner(System.in);
 
-		Pet buddy = new Pet(10, 10, 10, 10, 10);
+		Pet buddy = new Pet(10, 10, 10, 10, 10, 10, 10);
 
 		System.out.println("This is your new virtual pet! What would you like to name your dog?");
 		String name = input.nextLine();
