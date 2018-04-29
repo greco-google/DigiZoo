@@ -13,21 +13,13 @@ public class Zoo {
 	
 	public void showAllZooPets() {
 		for (Pet pet: pets) {
-			if (pet instanceof ***Something***) {
-				System.out.println(pet);
-			}
+			System.out.println(pet.getPetName());
 		}
 	}
 	
 	public void showAllPetTypes() {
 		for (Pet pet: pets) {
 			System.out.println(pet.getPetName() + " is a " + pet.getPetType());
-		}
-	}
-	
-	public void showAllPetNames() {
-		for(Pet pet: pets) {
-			System.out.println(pet.getPetName());
 		}
 	}
 	
