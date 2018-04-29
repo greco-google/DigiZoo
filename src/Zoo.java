@@ -31,8 +31,8 @@ public class Zoo {
 	
 	
 	
-	public void addOrder(Items theOrder) {
-		orders.add(theOrder);
+	public void addPet(Pet pet) {
+		Pet.add(pet);
 	}
 	
 	public void removeVariety(String variety) {

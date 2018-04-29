@@ -107,6 +107,11 @@ public class Pet {
 	public void setWaste(int waste) {
 		this.waste = waste;
 	}
+
+	public static void add(Pet pet) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	
