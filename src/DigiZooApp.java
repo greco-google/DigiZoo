@@ -6,11 +6,8 @@ public class DigiZooApp {
 
 		Scanner input = new Scanner(System.in);
 
-		Pet buddy = new Pet(10, 10, 10, 10, 10, 10, 10);
-
 		System.out.println("This is your new virtual Zoo!");
 		String name = input.nextLine();
-		System.out.println(buddy);
 
 	//if/else statement for the individual choices of specific animals
 		

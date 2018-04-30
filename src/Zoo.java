@@ -15,7 +15,8 @@ public class Zoo {
 		pets.remove(pet);
 	}
 	
-	public void showAllZooPets() {
+	public void showAllPetsName() {
+		Collections.sort(pets);
 		for (Pet pet: pets) {
 			System.out.println(pet.getPetName());
 		}
@@ -59,8 +60,15 @@ public class Zoo {
 		}
 	}
 	
-	public ArrayList<Pet> sortAscending() {
-		Collections.sort(pets);
-		return (ArrayList<Pet>)pets;
+	public void petStatus() {
+		for (Pet pet: pets) {
+			pet.showStatus();
+		}
 	}
+	
+	
+//	public ArrayList<Pet> sortAscending() {
+//		Collections.sort(pets);
+//		return (ArrayList<Pet>)pets;
+//	}
 }
