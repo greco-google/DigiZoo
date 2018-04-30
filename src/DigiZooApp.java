@@ -8,13 +8,15 @@ public class DigiZooApp {
 
 		Pet buddy = new Pet(10, 10, 10, 10, 10, 10, 10);
 
-		System.out.println("This is your new virtual pet! What would you like to name your dog?");
+		System.out.println("This is your new virtual Zoo!");
 		String name = input.nextLine();
 		System.out.println(buddy);
 
+	//if/else statement for the individual choices of specific animals
+		
 		System.out.println("\nWhat would you like to do with " + name + "?");
-		System.out.println("Press 1 to feed " + name);
-		System.out.println("Press 2 to give water to " + name);
+		System.out.println("Press 1 to feed the animal ");
+		System.out.println("Press 2 to give the animal water");
 		System.out.println("Press 3 to play with " + name);
 		System.out.println("Press 4 to let " + name + " out to the bathroom");
 		System.out.println("Press 5 to put " + name + " to sleep");
