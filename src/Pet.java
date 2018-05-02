@@ -1,4 +1,4 @@
-public class Pet {
+public abstract class Pet implements Comparable<Pet>{
 	
 	protected String petType;
 	protected String petName;
@@ -109,6 +109,16 @@ public class Pet {
 	}
 
 	public static void add(Pet pet) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+	//MAKE A SHOW STATUS
+	
+	
+	public void showStatus() {
 		// TODO Auto-generated method stub
 		
 	}
