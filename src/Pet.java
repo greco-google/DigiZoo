@@ -10,6 +10,9 @@ public abstract class Pet implements Comparable<Pet>{
 	static int tired;
 	static int waste;
 	
+//We need a sleep function
+//We need an ignore function
+		//Idk if function is the right word to use
 
 
 	public String getPetType() {
