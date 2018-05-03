@@ -22,42 +22,41 @@ public class DigiZooApp {
 
 		while (task != 9) {
 			if (task == 1) {
-				pet.feed();
-				pet.tick();
+				Pet.feed();
+				Pet.tick();
 				System.out.println("You are now feeding the animal...");
 			} else if (task == 2) {
-				pet.drink();
-				pet.tick();
+				Pet.water();
+				Pet.tick();
 				System.out.println("The animal is drinking up...");
 			} else if (task == 3) {
-				pet.play();
-				pet.tick();
-				System.out.println("You have chosen to play with the animal...");
+				Pet.walk();
+				Pet.tick();
+				System.out.println("You have chosen to walk the animal...");
 			} else if (task == 4) {
-				pet.bathroom();
-				pet.tick();
+				Pet.walk();
+				Pet.tick();
 				System.out.println("The animal is going to the bathroom...");
 			} else if (task == 5) {
-				pet.sleep();
-				pet.tick();
+				Pet.sleep();
+				Pet.tick();
 				System.out.println("The animal is now sleeping...");
 			} else if (task == 6) {
-				pet.doc();
-				pet.tick();
+				Pet.vet();
+				Pet.tick();
 				System.out.println("The animal is now going to go to the doctor...");
 			} else if (task == 7) {
-				pet.nothing();
-				pet.tick();
+				Pet.nothing();
+				Pet.tick();
 			}
 			else if (task == 8) {
 				System.out.println("Unfourtunatly you have entered a wrong number. Because of this, the animals got "
 						+ "very angry and ran away from the zoo... \n\nOne year later...\n\nThe animals have not been found and"
 								+ " you have given up hope on seeing your pets again :(. It is a very sad time. \nPlease be "
-								+ "more careful with your next pet.\n:):):) lol");
+								+ "more careful with your next Pet.\n:):):) lol");
 				System.exit(0);
 			}
 
-			System.out.println(pet);
 			System.out.println("\nWhat would you like to do with this animal?");
 			System.out.println("Press 1 to feed the animal ");
 			System.out.println("Press 2 to give the animal water");

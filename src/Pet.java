@@ -2,13 +2,13 @@ public abstract class Pet implements Comparable<Pet>{
 	
 	protected String petType;
 	protected String petName;
-	int tick;
-	int health;
-	int hunger;
-	int thirst;
-	int bored;
-	int tired;
-	int waste;
+	static int tick;
+	static int health;
+	static int hunger;
+	static int thirst;
+	static int bored;
+	static int tired;
+	static int waste;
 	
 
 
@@ -20,7 +20,7 @@ public abstract class Pet implements Comparable<Pet>{
 		return petName;
 	}
 	
-	public void tick() {
+	public static void tick() {
 		tick = tick + (int) ((Math.random() * 3) + 1);
 		health = health - (int) ((Math.random() * 3) + 1);
 		hunger = hunger + (int) ((Math.random() * 3) + 1);
@@ -29,7 +29,7 @@ public abstract class Pet implements Comparable<Pet>{
 		tired = tired + (int) ((Math.random() * 3) + 1);
 	}
 	
-	public void feed() {
+	public static void feed() {
 		tick = tick + (int) ((Math.random() * 3) + 1);
 		hunger = hunger - (int) ((Math.random() * 13) + 1);
 		thirst = thirst + (int) ((Math.random() * 5) + 1);
@@ -38,7 +38,7 @@ public abstract class Pet implements Comparable<Pet>{
 		waste = waste + (int) ((Math.random() *2) + 1);
 	}
 	
-	public void walk() {
+	public static void walk() {
 		tick = tick + (int) ((Math.random() * 3) + 1);
 		hunger = hunger + (int) ((Math.random() * 5) + 1);
 		thirst = thirst + (int) ((Math.random() * 5) + 1);
@@ -48,7 +48,7 @@ public abstract class Pet implements Comparable<Pet>{
 	}
 
 	
-	public void water() {
+	public static void water() {
 		tick = tick + (int) ((Math.random() * 3) + 1);
 		thirst = thirst - (int) ((Math.random() * 7) + 1);
 		hunger = hunger - (int) ((Math.random() * 13) + 1);
@@ -56,11 +56,11 @@ public abstract class Pet implements Comparable<Pet>{
 		health = health + (int) ((Math.random() * 3) + 1);
 	}
 	
-	public void vet() {
+	public static void vet() {
 		health = 100;
 	}
 
-	public int getHealth() {
+	public static int getHealth() {
 		return health;
 	}
 
@@ -68,7 +68,7 @@ public abstract class Pet implements Comparable<Pet>{
 		this.health = health;
 	}
 
-	public int getHunger() {
+	public static int getHunger() {
 		return hunger;
 	}
 
@@ -76,7 +76,7 @@ public abstract class Pet implements Comparable<Pet>{
 		this.hunger = hunger;
 	}
 
-	public int getThirst() {
+	public static int getThirst() {
 		return thirst;
 	}
 
@@ -84,7 +84,7 @@ public abstract class Pet implements Comparable<Pet>{
 		this.thirst = thirst;
 	}
 
-	public int getBored() {
+	public static int getBored() {
 		return bored;
 	}
 
@@ -92,7 +92,7 @@ public abstract class Pet implements Comparable<Pet>{
 		this.bored = bored;
 	}
 
-	public int getTired() {
+	public static int getTired() {
 		return tired;
 	}
 
@@ -100,7 +100,7 @@ public abstract class Pet implements Comparable<Pet>{
 		this.tired = tired;
 	}
 
-	public int getWaste() {
+	public static int getWaste() {
 		return waste;
 	}
 
