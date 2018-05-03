@@ -9,6 +9,7 @@ public class DigiZooApp {
 		System.out.println("This is your new Virtual Zoo!");
 
 	//if/else statement for the individual choices of specific animals
+		//We need Status functionality
 		
 		System.out.println("\nWhat would you like to do with this animal?");
 		System.out.println("Press 1 to feed the animal ");
@@ -37,15 +38,17 @@ public class DigiZooApp {
 				Pet.walk();
 				Pet.tick();
 				System.out.println("The animal is going to the bathroom...");
-//			} else if (task == 5) {
-//				Pet.sleep();
-//				Pet.tick();
-//				System.out.println("The animal is now sleeping...");
+			} else if (task == 5) {
+				Pet.sleep();
+				Pet.tick();
+				System.out.println("The animal is now sleeping...");
 			} else if (task == 6) {
 				Pet.vet();
 				Pet.tick();
 				System.out.println("The animal is now going to go to the doctor...");
-//			} 
+			} else if (task == 7) {
+				Pet.nothing();
+				Pet.tick();
 			}
 			else if (task == 8) {
 				System.out.println("Unfourtunatly you have entered a wrong number. Because of this, the animals got "
