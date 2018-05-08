@@ -32,6 +32,15 @@ public abstract class Pet implements Comparable<Pet>{
 		tired = tired + (int) ((Math.random() * 3) + 1);
 	}
 	
+	public static void nothing() {
+		tick = tick + (int) ((Math.random() * 3) + 1);
+		health = health - (int) ((Math.random() * 3) + 1);
+		hunger = hunger + (int) ((Math.random() * 3) + 1);
+		thirst = thirst + (int) ((Math.random() * 3) + 1);
+		bored = bored + (int) ((Math.random() * 3) + 1);
+		tired = tired + (int) ((Math.random() * 3) + 1);
+	}
+	
 	public static void feed() {
 		tick = tick + (int) ((Math.random() * 3) + 1);
 		hunger = hunger - (int) ((Math.random() * 13) + 1);
