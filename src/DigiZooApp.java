@@ -21,11 +21,12 @@ public class DigiZooApp {
 			System.out.println("Press 5 to exit");
 			int task = input.nextInt();
 		
-		case 1:
+		if (task == 1) {
+			
 		    while (true) {
 		        System.out.println("What's the name of the pet you want to add: ");
-		        name = scanner.next();
-		        if (zoo.getPetByName(name) != null) {
+		        petName = scanner.next();
+		        if (Pet.getPetByName(petName) != null) {
 		            System.out.println("This name has already existed, choose another one!");
 		        } else {
 		            break;
@@ -40,41 +41,45 @@ public class DigiZooApp {
 		        System.out.println("4. Tiger");
 		        System.out.println("5. Wolf");
 		        try {
-		            instruction = scanner.nextInt();
+		            variety = scanner.nextInt();
 		        } catch (Exception e) {
-		            System.out.println("Invalid instruction, input again!");
+		            System.out.println("That was not one of the options! Try again");
 		            continue;
 		        }
 
-		        switch (instruction) {
+		        switch (variety) {
 		            case 1:
-		                zoo.addPet(new Dog(name));
+		                Pet.add(new Dog(petName));
 		                break choosePetType;
 		            case 2:
-		                zoo.addPet(new Cat(name));
+		                zoo.addPet(new Cat(petName));
 		                break choosePetType;
 		            case 3:
-		                zoo.addPet(new Lion(name));
+		                zoo.addPet(new Lion(petName));
 		                break choosePetType;
 		            case 4:
-		                zoo.addPet(new Tiger(name));
+		                zoo.addPet(new Tiger(petName));
 		                break choosePetType;
 		            case 5:
-		                zoo.addPet(new Wolf(name));
+		                zoo.addPet(new Wolf(petName));
 		                break choosePetType;
 		            default:
-		                System.out.println("Invalid instruction, input again!");
+		                System.out.println("That was not one of the options! Try again");
 		        }
 		    }
-		    System.out.println("Add done!");
+		    System.out.println("You have added " + petName + " to the DigiZoo!");
 		    break;
-		case 2:
-		    System.out.println("What's the name of the pet you want to remove: ");
+		    
+			}
+		else if (task == 2) {
+		    System.out.println("What is the name of the pet you want to release into thw wild: ");
 		    name = scanner.next();
 		    zoo.removePet(name);
 		    System.out.println("Remove done!");
 		    break;
-		case 3:
+		}
+		
+		else if (task == 3) {
 		    display:
 		    while (true) {
 		        System.out.println("Here lists display instructions: (1, 2, 3, 4, 5 or 6)");
@@ -85,48 +90,59 @@ public class DigiZooApp {
 		        System.out.println("5. Display felines");
 		        System.out.println("6. Back to main menu");
 		        try {
-		            instruction = scanner.nextInt();
+		            variety = scanner.nextInt();
 		        } catch (Exception e) {
-		            System.out.println("Invalid instruction, input again!");
+		        		System.out.println("That was not one of the options! Try again");
 		            continue;
 		        }
 
-		        switch (instruction) {
-		            case 1:
-		                zoo.displayAll();
+		        switch (variety) {
+		        		if (task == 1) {
+		                Pet.displayAll();
 		                break display;
-		            case 2:
+		        		}
+		        		else if (task == 2) {
 		                zoo.displayDomesticated();
 		                break display;
-		            case 3:
+		        		}
+		        		else if (task == 3) {
 		                zoo.displayFeral();
 		                break display;
-		            case 4:
+		        		}
+		        		else if (task == 4) {
 		                zoo.displayCanines();
 		                break display;
-		            case 5:
+		        		}
+		        		else if (task == 5) {
 		                zoo.displayFelines();
 		                break display;
-		            case 6:
+		        		}
+		        		else if (task == 6) {
 		                break display;
-		            default:
-		                System.out.println("Invalid instruction, input again!");
+		        		}
+		        		else {
+		        			System.out.println("That was not one of the options! Try again");
+		        		}
 		        }
 		    }
 		    break;
-		case 4:
-		    VirtualPet pet;
+		}
+		else if (task == 4) {
+		    Pet pet;
 		    while (true) {
 		        System.out.println("What's the name of the pet you want to care for: ");
-		        name = scanner.next();
-		        if ((pet = zoo.getPetByName(name)) == null) {
-		            System.out.println("This pet is not valid, choose another one!");
-		        } else {
+		        petName = scanner.next();
+		        if ((pet = Pet.getPetByName(petName)) == null) {
+		            System.out.println("That is not one of the pets in the Zoo. Try again");
+		        } 
+		        else {
 		            break;
 		        }
 		    }
-		    System.out.println(pet);
-		    chooseAction:
+		}
+		    System.out.println(((((((((Pet List)))))))));
+		    
+		else if (task == 5) {
 		    while (true) {
 		        System.out.println("What care do you want to do for this pet: (1, 2, 3, 4, 5, 6 or 7)");
 		        System.out.println("1. Feed it");
@@ -137,9 +153,9 @@ public class DigiZooApp {
 		        System.out.println("6. Take it to doctor");
 		        System.out.println("7. Back to main menu");
 		        try {
-		            instruction = scanner.nextInt();
+		            variety = scanner.nextInt();
 		        } catch (Exception e) {
-		            System.out.println("Invalid instruction, input again!");
+		        		System.out.println("That was not one of the options! Try again");
 		            continue;
 		        }
 
