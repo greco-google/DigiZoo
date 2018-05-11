@@ -187,10 +187,6 @@ public class DigiZooApp {
 		    break;
 		}
 		
-		
-		
-		
-		
 		while (incorrect) {
 			System.out.println("\nWhat would you like to do with this animal?");
 			System.out.println("Press 1 to feed the animal ");
@@ -246,27 +242,3 @@ public class DigiZooApp {
 		}
 	}
 
-}
-
-
-
-
-
-
-
-switch (instruction) {
-
-case 5:
-    zoo.tick();
-    System.out.println("Tick done!");
-    break;
-case 6:
-    break main;
-default:
-    System.out.println("Invalid instruction, input again!");
-}
-}
-scanner.close();
-System.out.println("Goodbye~");
-}
-}
