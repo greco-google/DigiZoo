@@ -25,7 +25,7 @@ public class DigiZooApp {
 			
 		    while (true) {
 		        System.out.println("What's the name of the pet you want to add: ");
-		        petName = scanner.next();
+		        petName = input.next();
 		        if (Pet.getPetByName(petName) != null) {
 		            System.out.println("This name has already existed, choose another one!");
 		        } else {
@@ -41,7 +41,7 @@ public class DigiZooApp {
 		        System.out.println("4. Tiger");
 		        System.out.println("5. Wolf");
 		        try {
-		            variety = scanner.nextInt();
+		            variety = input.nextInt();
 		        } catch (Exception e) {
 		            System.out.println("That was not one of the options! Try again");
 		            continue;
@@ -73,8 +73,8 @@ public class DigiZooApp {
 			}
 		else if (task == 2) {
 		    System.out.println("What is the name of the pet you want to release into thw wild: ");
-		    name = scanner.next();
-		    zoo.removePet(name);
+		    petName = input.next();
+		    Pet.removePet(petName);
 		    System.out.println("Remove done!");
 		    break;
 		}
@@ -90,7 +90,7 @@ public class DigiZooApp {
 		        System.out.println("5. Display felines");
 		        System.out.println("6. Back to main menu");
 		        try {
-		            variety = scanner.nextInt();
+		            variety = input.nextInt();
 		        } catch (Exception e) {
 		        		System.out.println("That was not one of the options! Try again");
 		            continue;
@@ -131,7 +131,7 @@ public class DigiZooApp {
 		    Pet pet;
 		    while (true) {
 		        System.out.println("What's the name of the pet you want to care for: ");
-		        petName = scanner.next();
+		        petName = input.next();
 		        if ((pet = Pet.getPetByName(petName)) == null) {
 		            System.out.println("That is not one of the pets in the Zoo. Try again");
 		        } 
@@ -153,7 +153,7 @@ public class DigiZooApp {
 		        System.out.println("6. Take it to doctor");
 		        System.out.println("7. Back to main menu");
 		        try {
-		            variety = scanner.nextInt();
+		            variety = input.nextInt();
 		        } catch (Exception e) {
 		        		System.out.println("That was not one of the options! Try again");
 		            continue;
@@ -238,7 +238,9 @@ public class DigiZooApp {
 								+ " you have given up hope on seeing your pets again :(. It is a very sad time. \nPlease be "
 								+ "more careful with your next Pet.\n:):):) lol");
 				System.exit(0);
+				}
 			}
 		}
 	}
+}
 
