@@ -9,12 +9,14 @@ public abstract class Pet implements Comparable<Pet>{
 	static int bored;
 	static int tired;
 	static int waste;
+	static boolean sleep;
 	
 //We need a sleep function
 //We need an ignore function
 		//Idk if function is the right word to use
 
-
+//show status
+	
 	public String getPetType() {
 		return petType;
 	}
@@ -68,6 +70,14 @@ public abstract class Pet implements Comparable<Pet>{
 		health = health + (int) ((Math.random() * 3) + 1);
 	}
 	
+	public static void sleep() {
+		tick = tick + (int) ((Math.random() * 3) + 1);
+		thirst = thirst + (int) ((Math.random() * 5) + 1);
+		hunger = hunger + (int) ((Math.random() * 5) + 1);
+		tired = 0;
+		health = 85;
+	}
+	
 	public static void vet() {
 		health = 100;
 	}
@@ -119,6 +129,14 @@ public abstract class Pet implements Comparable<Pet>{
 	public void setWaste(int waste) {
 		this.waste = waste;
 	}
+	
+	public static boolean getSleep() {
+		return sleep;
+	}
+
+	public void setSleep(int health) {
+		this.sleep = sleep;
+	}
 
 	public static void add(Pet pet) {
 		// TODO Auto-generated method stub
@@ -132,7 +150,12 @@ public abstract class Pet implements Comparable<Pet>{
 	
 	public void showStatus() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("");
+		this.show(health);
+		this.show(hunger);
+		this.show(thirst);
+		this.show(bored);
+
 	}
 	
 	

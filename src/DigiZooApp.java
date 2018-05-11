@@ -12,6 +12,8 @@ public class DigiZooApp {
 	//if/else statement for the individual choices of specific animals
 		//We need Status functionality
 		
+		
+		
 		while (incorrect) {
 			System.out.println("\nWhat would you like to do with this animal?");
 			System.out.println("Press 1 to feed the animal ");
