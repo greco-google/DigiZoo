@@ -21,12 +21,11 @@ public abstract class Domesticated extends Pet {
 	@Override
 	public void showStats() {
 		if (!isSleeping)
-			System.out.println("(" + this.getClass().getSimpleName() + ") " + this.getName() + "\nHunger: "
-					+ this.hunger + "/100" + "\nThirst: " + this.thirst + "/100" + "\nWaste: " + this.waste + "/100"
-					+ "\nTiredness: " + this.sleep + "/100" + "\nBoredom: " + this.boredom + "/100" + "\nSickness: "
-					+ this.health);
+			System.out.println("\n\nThis is your " + this.getClass().getSimpleName() + ":  " + this.getName() + "\n\nHis stats (out of 100) are:\nHunger: "
+					+ this.hunger + "\nThirst: " + this.thirst + "\nWaste: " + this.waste
+					+ "\nTiredness: " + this.sleep + "\nSick: " + this.health);
 		else
-			System.out.println(this.name + " is sleeping. Zzzz");
+			System.out.println(this.name + " is sleeping right now. Please come back later when he is awake.");
 	}
 
 	@Override

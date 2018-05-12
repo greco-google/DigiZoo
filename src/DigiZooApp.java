@@ -8,11 +8,11 @@ public class DigiZooApp {
 		Scanner input = new Scanner(System.in);
 		int task = 1;
 
-		pet.addPet(new Cat("Jack"));
-		pet.addPet(new Dog("Mary"));
-		pet.addPet(new Tiger("Lenard"));
-		pet.addPet(new Wolf("Jen"));
-		pet.addPet(new Lion("Cris"));
+		pet.addPet(new Cat("Hollywood"));
+		pet.addPet(new Dog("Jessie"));
+		pet.addPet(new Tiger("Brittney"));
+		pet.addPet(new Wolf("Eryn"));
+		pet.addPet(new Lion("Josh"));
 
 		pet.tick();
 		pet.tick();
@@ -27,12 +27,12 @@ public class DigiZooApp {
 			task = Integer.parseInt(input.nextLine());
 
 				if (task == 1) {
-					System.out.println("Which pet do you want to add: (1, 2, 3, 4 or 5)");
-				    System.out.println("1. Dog");
-				    System.out.println("2. Cat");
-				    System.out.println("3. Lion");
-				    System.out.println("4. Tiger");
-				    System.out.println("5. Wolf");
+					System.out.println("Which pet do you want to add:");
+				    System.out.println("Press 1 to add a Dog");
+				    System.out.println("Press 2 to add a Cat");
+				    System.out.println("Press 3 to add a Lion");
+				    System.out.println("Press 4 to add a Tiger");
+				    System.out.println("Press 5 to add a Wolf");
 					task = Integer.parseInt(input.nextLine());
 					System.out.println("What is its name?");
 					String name = input.nextLine();
@@ -55,12 +55,12 @@ public class DigiZooApp {
 					System.out.println("You released the animal into the wilderness!");
 
 				} else if (task == 3) {
-					System.out.println("Here lists display instructions: (1, 2, 3, 4, 5 or 6)");
-			        System.out.println("1. Display all by name");
-			        System.out.println("2. Display all domesticated");
-			        System.out.println("3. Display all feral");
-			        System.out.println("4. Display canines");
-			        System.out.println("5. Display felines");
+					System.out.println("How do you want to see your pets)");
+			        System.out.println("Press 1 to display all by their names");
+			        System.out.println("Press 2 to display all domesticated");
+			        System.out.println("Press 3 to play all feral");
+			        System.out.println("Press 4 to display canines");
+			        System.out.println("Press 5 to display felines");
 					task = Integer.parseInt(input.nextLine());
 					if (task == 1) {
 						pet.showAllPetsByName();
@@ -107,25 +107,25 @@ public class DigiZooApp {
 		} 
 	}
 	static public void printFeralOptions() {
-		System.out.println("1. Feed");
-		System.out.println("2. Water");
-		System.out.println("3. Let it use the bathroom");
-		System.out.println("4. Cure sickness");
+		System.out.println("Press 1 to feed the animal");
+		System.out.println("Press 2 to give water to the animal");
+		System.out.println("Press 3 to let the animal use the bathroom");
+		System.out.println("Press 4 to cure its sickness");
 	}
 
 	static public void printDomesticOptions() {
-		System.out.println("1. Feed");
-		System.out.println("2. Water");
-		System.out.println("3. Go for a walk");
-		System.out.println("4. Cure sickness)");
-		System.out.println("5. Play with it");
+		System.out.println("Press 1 to feed the animal");
+		System.out.println("Press 2 to give water to the animal");
+		System.out.println("Press 3 to go for a walk with the animal");
+		System.out.println("Press 4 to cure its sickness");
+		System.out.println("Press 5 to play with the animal");
 	}
 
 	static public void printDogOptions() {
-		System.out.println("1. Feed");
-		System.out.println("2. Water");
-		System.out.println("3. Walk");
-		System.out.println("4. Cure sickness");
+		System.out.println("Press 1 to feed the animal");
+		System.out.println("Press 2 to give water to the dog");
+		System.out.println("Press 3 to walk the dog ");
+		System.out.println("Press 4 to cure the dog's sickness");
 		System.out.println("5. Play with it");
 	}
 }
