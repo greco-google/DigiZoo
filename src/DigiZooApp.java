@@ -16,7 +16,7 @@ public class DigiZooApp {
 			System.out.println("\nWhat would you like to do your animals?");
 			System.out.println("Press 1 to add a new pet");
 			System.out.println("Press 2 to release one of your pets into the wild");
-			System.out.println("Press 3 to showw all of the pets that are in your zoo");
+			System.out.println("Press 3 to show all of the pets that are in your zoo");
 			System.out.println("Press 4 to interact with your pets");
 			System.out.println("Press 5 to exit");
 			int task = input.nextInt();
@@ -52,16 +52,16 @@ public class DigiZooApp {
 		                Pet.add(new Dog(petName));
 		                break choosePetType;
 		            case 2:
-		                zoo.addPet(new Cat(petName));
+		                Pet.add(new Cat(petName));
 		                break choosePetType;
 		            case 3:
-		                zoo.addPet(new Lion(petName));
+		                Pet.add(new Lion(petName));
 		                break choosePetType;
 		            case 4:
-		                zoo.addPet(new Tiger(petName));
+		                Pet.add(new Tiger(petName));
 		                break choosePetType;
 		            case 5:
-		                zoo.addPet(new Wolf(petName));
+		                Pet.add(new Wolf(petName));
 		                break choosePetType;
 		            default:
 		                System.out.println("That was not one of the options! Try again");
@@ -75,7 +75,7 @@ public class DigiZooApp {
 		    System.out.println("What is the name of the pet you want to release into thw wild: ");
 		    petName = input.next();
 		    Pet.removePet(petName);
-		    System.out.println("Remove done!");
+		    System.out.println("You released the animal into the wilderness!");
 		    break;
 		}
 		
@@ -102,19 +102,19 @@ public class DigiZooApp {
 		                break display;
 		        		}
 		        		else if (task == 2) {
-		                zoo.displayDomesticated();
+		                Pet.displayDomesticated();
 		                break display;
 		        		}
 		        		else if (task == 3) {
-		                zoo.displayFeral();
+		                Pet.displayFeral();
 		                break display;
 		        		}
 		        		else if (task == 4) {
-		                zoo.displayCanines();
+		                Pet.displayCanines();
 		                break display;
 		        		}
 		        		else if (task == 5) {
-		                zoo.displayFelines();
+		                Pet.displayFelines();
 		                break display;
 		        		}
 		        		else if (task == 6) {
@@ -160,32 +160,40 @@ public class DigiZooApp {
 		        }
 
 		        switch (instruction) {
-		            case 1:
-		                pet.feed();
+		           if (task == 5 ) {
+		                Pet.feed();
 		                break chooseAction;
-		            case 2:
-		                pet.water();
+		           }
+		            else if (task == 5) {
+		                Pet.water();
 		                break chooseAction;
-		            case 3:
-		                pet.bathroom();
+		            }
+		            else if (task == 5) {
+		                Pet.bathroom();
 		                break chooseAction;
-		            case 4:
-		                pet.play();
+		            }
+		            else if (task == 5) {
+		                Pet.play();
 		                break chooseAction;
-		            case 5:
-		                pet.walk();
+		            }
+		            else if (task == 5) {
+		                Pet.walk();
 		                break chooseAction;
-		            case 6:
-		                pet.doctor();
+		            }
+		            else if (task == 5) {
+		                Pet.doctor();
 		                break chooseAction;
-		            case 7:
+		            }
+		            else if (task == 5) {
 		                break chooseAction;
+		            }
 		            default:
 		                System.out.println("Invalid instruction, input again!");
 		        }
 		    }
 		    break;
-		}
+		//}
+		
 		
 		while (incorrect) {
 			System.out.println("\nWhat would you like to do with this animal?");
