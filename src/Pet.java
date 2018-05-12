@@ -151,12 +151,13 @@ public abstract class Pet implements Comparable<Pet>{
 	public void showStatus() {
 		// TODO Auto-generated method stub
 		System.out.println("");
-		this.show(health);
-		this.show(hunger);
-		this.show(thirst);
-		this.show(bored);
+		health = this.health;
+		hunger = this.hunger;
+		thirst = this.thirst;
+		bored = this.bored;
 
 	}
+
 	
 	
 	

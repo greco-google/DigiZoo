@@ -2,11 +2,11 @@
 public abstract class Domesticated extends Pet{
 
     public void play() {
-        if (isSleeping) {
+        if (sleep) {
             System.out.println("This pet is sleeping.");
         } else {
-            boredom -= 20;
-            if (boredom < 0) boredom = 0;
+            bored -= 20;
+            if (bored < 0) bored = 0;
             System.out.println("Play done!");
         }
     }

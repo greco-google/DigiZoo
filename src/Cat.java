@@ -1,5 +1,5 @@
 
-public class Cat extends Domesticated implements Feline{
+public abstract class Cat extends Domesticated implements Feline{
 	public Cat (String petName){
 		this.petName = petName;
 		this.hunger = hunger;

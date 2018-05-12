@@ -1,5 +1,5 @@
 
-public class Lion extends Feral implements Feline{
+public abstract class Lion extends Feral implements Feline{
 	public Lion(String petName) {
 		this.petName = petName;
 		this.hunger = hunger;

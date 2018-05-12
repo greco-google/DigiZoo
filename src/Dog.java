@@ -1,5 +1,5 @@
 
-public class Dog extends Domesticated implements Canine{
+public abstract class Dog extends Domesticated implements Canine{
 	public Dog(String petName) {
 		this.petName = petName;
 		this.hunger = hunger;
@@ -10,13 +10,10 @@ public class Dog extends Domesticated implements Canine{
 		
 	    @Override
 	    public void walk() {
-	        if (sleep) {
-	            System.out.println("This pet is sleeping.");
-	        } else {
-	            bored -= 30;
-	            if (bored < 0) bored = 0;
-	            System.out.println("Walk done!");
-	        }
+	        this.bored = 0;
+	        this.waste = 0;
+	        this.hunger = hunger;
+	        this.health = health - 10;
 	    }
 	}
 }
