@@ -23,7 +23,7 @@ public class DigiZooApp {
 			System.out.println("Press 2 to release one of your pets into the wild");
 			System.out.println("Press 3 to show all of the pets that are in your zoo");
 			System.out.println("Press 4 to interact with your pets");
-			System.out.println("Press 5 to exit");
+			System.out.println("Press 0 to exit");
 			task = Integer.parseInt(input.nextLine());
 
 				if (task == 1) {
