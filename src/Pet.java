@@ -24,6 +24,11 @@ public abstract class Pet implements Comparable<Pet>{
 	public String getPetName() {
 		return petName;
 	}
+
+    public void setPetName(String name) {
+        this.petName = petName;
+    }
+	
 	
 	public static void tick() {
 		tick = tick + (int) ((Math.random() * 3) + 1);
@@ -150,6 +155,11 @@ public abstract class Pet implements Comparable<Pet>{
 		thirst = this.thirst;
 		bored = this.bored;
 
+	}
+
+	public static Object getPetByName(String petName2) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	

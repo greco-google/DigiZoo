@@ -12,6 +12,7 @@ public class DigiZooApp {
 	//if/else statement for the individual choices of specific animals
 		//We need Status functionality
 		
+		String petName;
 		while (incorrect) {
 			System.out.println("\nWhat would you like to do your animals?");
 			System.out.println("Press 1 to add a new pet");
@@ -26,6 +27,7 @@ public class DigiZooApp {
 		    while (true) {
 		        System.out.println("What's the name of the pet you want to add: ");
 		        petName = input.next();
+		        Pet.add(new Cat(petName));
 		        if (Pet.getPetByName(petName) != null) {
 		            System.out.println("This name has already existed, choose another one!");
 		        } else {
@@ -34,12 +36,12 @@ public class DigiZooApp {
 		    }
 		    choosePetType:
 		    while (true) {
-		        System.out.println("Which pet do you want to add: (1, 2, 3, 4 or 5)");
-		        System.out.println("1. Dog");
-		        System.out.println("2. Cat");
-		        System.out.println("3. Lion");
-		        System.out.println("4. Tiger");
-		        System.out.println("5. Wolf");
+		        System.out.println("What kind of an animal would you like to add");
+		        System.out.println("Press 1 to add a Dog");
+		        System.out.println("Press 2 to add a Cat");
+		        System.out.println("Press 3 to add a Lion");
+		        System.out.println("Press 4 to add a Tiger");
+		        System.out.println("Press 5 to add a Wolf");
 		        try {
 		            variety = input.nextInt();
 		        } catch (Exception e) {
@@ -77,7 +79,7 @@ public class DigiZooApp {
 		    break;
 		    
 		}
-		else if (task == 2) {
+		if (task == 2) {
 		    System.out.println("What is the name of the pet you want to release into thw wild: ");
 		    petName = input.next();
 		    Pet.removePet(petName);
@@ -88,13 +90,13 @@ public class DigiZooApp {
 		else if (task == 3) {
 		    display:
 		    while (true) {
-		        System.out.println("Here lists display instructions: (1, 2, 3, 4, 5 or 6)");
-		        System.out.println("1. Display all");
-		        System.out.println("2. Display all domesticated");
-		        System.out.println("3. Display all feral");
-		        System.out.println("4. Display canines");
-		        System.out.println("5. Display felines");
-		        System.out.println("6. Back to main menu");
+		        System.out.println("How do you want to see your pets)");
+		        System.out.println("Press 1 to display all");
+		        System.out.println("Press 2 to display all domesticated");
+		        System.out.println("Press 3 to isplay all feral");
+		        System.out.println("Press 4 to display canines");
+		        System.out.println("Press 5 to display felines");
+		        System.out.println("Press 6 to go back to main menu");
 		        try {
 		            variety = input.nextInt();
 		        } catch (Exception e) {
@@ -132,7 +134,7 @@ public class DigiZooApp {
 		        }
 		    }
 		    break;
-		else if (task == 4) {
+		if (task == 4) {
 		    Pet pet;
 		    while (true) {
 		        System.out.println("What's the name of the pet you want to care for: ");
@@ -147,16 +149,16 @@ public class DigiZooApp {
 		}
 		    System.out.println(((((((((Pet List)))))))));
 		    
-		else if (task == 5) {
+		if (task == 5) {
 		    while (true) {
 		        System.out.println("What care do you want to do for this pet: (1, 2, 3, 4, 5, 6 or 7)");
-		        System.out.println("1. Feed it");
-		        System.out.println("2. Water it");
-		        System.out.println("3. Out to bathroom");
-		        System.out.println("4. Play with it");
-		        System.out.println("5. Walk it");
-		        System.out.println("6. Take it to doctor");
-		        System.out.println("7. Back to main menu");
+		        System.out.println("Press 1 to feed the animal");
+		        System.out.println("Press 2 to give water to the animal");
+		        System.out.println("Press 3 to let the animal out to use the bathroom");
+		        System.out.println("Press 4 to play with the animal");
+		        System.out.println("Press 5 to walk the animal");
+		        System.out.println("Press 6 to take the animal to the doctor");
+		        System.out.println("Press 7 to go back to the main menu");
 		        try {
 		            variety = input.nextInt();
 		        } catch (Exception e) {
