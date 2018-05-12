@@ -1,11 +1,11 @@
 
-public abstract class Dog extends Domesticated implements Canine{
+public class Dog extends Domesticated implements Canine{
 	public Dog(String petName) {
-		this.petName = petName;
+		this.name = petName;
 		this.hunger = 0;
 		this.thirst = 0;
 		this.waste = 0;
-		this.bored = 30;
+		this.boredom = 30;
 		this.health = false;
 		
 //	    @Override
