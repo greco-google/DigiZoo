@@ -2,8 +2,8 @@ public abstract class Pet implements Comparable<Pet>{
 	
 	protected String petType;
 	protected String petName;
+	protected boolean health;
 	static int tick;
-	static int health;
 	static int hunger;
 	static int thirst;
 	static int bored;
@@ -27,7 +27,6 @@ public abstract class Pet implements Comparable<Pet>{
 	
 	public static void tick() {
 		tick = tick + (int) ((Math.random() * 3) + 1);
-		health = health - (int) ((Math.random() * 3) + 1);
 		hunger = hunger + (int) ((Math.random() * 3) + 1);
 		thirst = thirst + (int) ((Math.random() * 3) + 1);
 		bored = bored + (int) ((Math.random() * 3) + 1);
@@ -36,7 +35,6 @@ public abstract class Pet implements Comparable<Pet>{
 	
 	public static void nothing() {
 		tick = tick + (int) ((Math.random() * 3) + 1);
-		health = health - (int) ((Math.random() * 3) + 1);
 		hunger = hunger + (int) ((Math.random() * 3) + 1);
 		thirst = thirst + (int) ((Math.random() * 3) + 1);
 		bored = bored + (int) ((Math.random() * 3) + 1);
@@ -48,7 +46,6 @@ public abstract class Pet implements Comparable<Pet>{
 		hunger = hunger - (int) ((Math.random() * 13) + 1);
 		thirst = thirst + (int) ((Math.random() * 5) + 1);
 		tired = tired + (int) ((Math.random() * 3) + 1);
-		health = health - (int) ((Math.random() * 3) + 1);
 		waste = waste + (int) ((Math.random() *2) + 1);
 	}
 	
@@ -57,7 +54,6 @@ public abstract class Pet implements Comparable<Pet>{
 		hunger = hunger + (int) ((Math.random() * 5) + 1);
 		thirst = thirst + (int) ((Math.random() * 5) + 1);
 		bored = bored - (int) ((Math.random() * 3) + 1);
-		health = health + (int) ((Math.random() * 3) + 1);
 		waste = 0;
 	}
 
@@ -67,7 +63,6 @@ public abstract class Pet implements Comparable<Pet>{
 		thirst = thirst - (int) ((Math.random() * 7) + 1);
 		hunger = hunger - (int) ((Math.random() * 13) + 1);
 		tired = tired + (int) ((Math.random() * 3) + 1);
-		health = health + (int) ((Math.random() * 3) + 1);
 	}
 	
 	public static void sleep() {
@@ -75,18 +70,17 @@ public abstract class Pet implements Comparable<Pet>{
 		thirst = thirst + (int) ((Math.random() * 5) + 1);
 		hunger = hunger + (int) ((Math.random() * 5) + 1);
 		tired = 0;
-		health = 85;
 	}
 	
-	public static void vet() {
-		health = 100;
-	}
-
-	public static int getHealth() {
+	public boolean isSick() {
 		return health;
 	}
 
-	public void setHealth(int health) {
+	public void health() {
+		this.health = false;
+	}
+
+	public void setHealth(boolean health) {
 		this.health = health;
 	}
 

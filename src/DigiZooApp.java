@@ -48,29 +48,35 @@ public class DigiZooApp {
 		        }
 
 		        switch (variety) {
-		            case 1:
+		        		if (task == 1) {
 		                Pet.add(new Dog(petName));
 		                break choosePetType;
-		            case 2:
+		        		}
+		        		else if (task == 2) {
 		                Pet.add(new Cat(petName));
 		                break choosePetType;
-		            case 3:
+		        		}
+		        		else if (task == 3) {
 		                Pet.add(new Lion(petName));
 		                break choosePetType;
-		            case 4:
+		        		}
+		        		else if (task == 4) {
 		                Pet.add(new Tiger(petName));
 		                break choosePetType;
-		            case 5:
+		        		}
+		        		else if (task == 5) {
 		                Pet.add(new Wolf(petName));
 		                break choosePetType;
-		            default:
+		        		}
+		        		else {
 		                System.out.println("That was not one of the options! Try again");
+		        		}
 		        }
 		    }
 		    System.out.println("You have added " + petName + " to the DigiZoo!");
 		    break;
 		    
-			}
+		}
 		else if (task == 2) {
 		    System.out.println("What is the name of the pet you want to release into thw wild: ");
 		    petName = input.next();
@@ -126,7 +132,6 @@ public class DigiZooApp {
 		        }
 		    }
 		    break;
-		}
 		else if (task == 4) {
 		    Pet pet;
 		    while (true) {
@@ -160,19 +165,19 @@ public class DigiZooApp {
 		        }
 
 		        switch (instruction) {
-		           if (task == 5 ) {
+		           if (task == 1 ) {
 		                Pet.feed();
 		                break chooseAction;
 		           }
-		            else if (task == 5) {
+		            else if (task == 2) {
 		                Pet.water();
 		                break chooseAction;
 		            }
-		            else if (task == 5) {
+		            else if (task == 3) {
 		                Pet.bathroom();
 		                break chooseAction;
 		            }
-		            else if (task == 5) {
+		            else if (task == 4) {
 		                Pet.play();
 		                break chooseAction;
 		            }
@@ -180,15 +185,16 @@ public class DigiZooApp {
 		                Pet.walk();
 		                break chooseAction;
 		            }
-		            else if (task == 5) {
+		            else if (task == 6) {
 		                Pet.doctor();
 		                break chooseAction;
 		            }
-		            else if (task == 5) {
+		            else if (task == 7) {
 		                break chooseAction;
 		            }
-		            default:
+		            else {
 		                System.out.println("Invalid instruction, input again!");
+		            }
 		        }
 		    }
 		    break;
@@ -246,9 +252,12 @@ public class DigiZooApp {
 								+ " you have given up hope on seeing your pets again :(. It is a very sad time. \nPlease be "
 								+ "more careful with your next Pet.\n:):):) lol");
 				System.exit(0);
+						}
+					}
 				}
 			}
 		}
 	}
 }
+
 
