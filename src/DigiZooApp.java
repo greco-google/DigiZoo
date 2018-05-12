@@ -126,7 +126,7 @@ public class DigiZooApp {
 		System.out.println("Press 2 to give water to the dog");
 		System.out.println("Press 3 to walk the dog ");
 		System.out.println("Press 4 to cure the dog's sickness");
-		System.out.println("5. Play with it");
+		System.out.println("Press 5 to play with the dog");
 	}
 }
 
